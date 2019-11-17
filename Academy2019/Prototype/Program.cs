@@ -1,16 +1,11 @@
-﻿// EN: Prototype Design Pattern
+﻿// Prototype Design Pattern
 //
 // Intent: Lets you copy existing objects without making your code dependent on
 // their classes.
-//
-// RU: Паттерн Прототип
-//
-// Назначение: Позволяет копировать объекты, не вдаваясь в подробности их
-// реализации.
 
 using System;
 
-namespace RefactoringGuru.DesignPatterns.Prototype.Conceptual
+namespace Fincongroup.Academy.DesignPatterns.Prototype.Conceptual
 {
     public class Person
     {
@@ -53,18 +48,12 @@ namespace RefactoringGuru.DesignPatterns.Prototype.Conceptual
             p1.Name = "Jack Daniels";
             p1.IdInfo = new IdInfo(666);
 
-            // EN: Perform a shallow copy of p1 and assign it to p2.
-            //
-            // RU: Выполнить поверхностное копирование p1 и присвоить её p2.
+            // Perform a shallow copy of p1 and assign it to p2.
             Person p2 = p1.ShallowCopy();
-            // EN: Make a deep copy of p1 and assign it to p3.
-            //
-            // RU: Сделать глубокую копию p1 и присвоить её p3.
+            // Make a deep copy of p1 and assign it to p3.
             Person p3 = p1.DeepCopy();
 
-            // EN: Display values of p1, p2 and p3.
-            //
-            // RU: Вывести значения p1, p2 и p3.
+            // Display values of p1, p2 and p3.
             Console.WriteLine("Original values of p1, p2, p3:");
             Console.WriteLine("   p1 instance values: ");
             DisplayValues(p1);
@@ -73,11 +62,8 @@ namespace RefactoringGuru.DesignPatterns.Prototype.Conceptual
             Console.WriteLine("   p3 instance values:");
             DisplayValues(p3);
 
-            // EN: Change the value of p1 properties and display the values of
+            // Change the value of p1 properties and display the values of
             // p1, p2 and p3.
-            //
-            // RU: Изменить значение свойств p1 и отобразить значения p1, p2 и
-            // p3.
             p1.Age = 32;
             p1.BirthDate = Convert.ToDateTime("1900-01-01");
             p1.Name = "Frank";

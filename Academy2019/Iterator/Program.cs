@@ -1,70 +1,47 @@
-﻿// EN: Iterator Design Pattern
+﻿// Iterator Design Pattern
 //
 // Intent: Lets you traverse elements of a collection without exposing its
 // underlying representation (list, stack, tree, etc.).
-//
-// RU: Паттерн Итератор
-//
-// Назначение: Даёт возможность последовательно обходить элементы составных
-// объектов, не раскрывая их внутреннего представления.
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace RefactoringGuru.DesignPatterns.Iterator.Conceptual
+namespace Fincongroup.Academy.DesignPatterns.Iterator.Conceptual
 {
     abstract class Iterator : IEnumerator
     {
         object IEnumerator.Current => Current();
 
-        // EN: Returns the key of the current element
-        //
-        // RU: Возвращает ключ текущего элемента
+        // Returns the key of the current element
         public abstract int Key();
 		
-        // EN: Returns the current element
-        //
-        // RU: Возвращает текущий элемент.
+        // Returns the current element
         public abstract object Current();
 		
-        // EN: Move forward to next element
-        //
-        // RU: Переходит к следующему элементу.
+        // Move forward to next element
         public abstract bool MoveNext();
 		
-        // EN: Rewinds the Iterator to the first element
-        //
-        // RU: Перематывает Итератор к первому элементу.
+        // Rewinds the Iterator to the first element
         public abstract void Reset();
     }
 
     abstract class IteratorAggregate : IEnumerable
     {
-        // EN: Returns an Iterator or another IteratorAggregate for the
+        // Returns an Iterator or another IteratorAggregate for the
         // implementing object.
-        //
-        // RU: Возвращает Iterator или другой IteratorAggregate для реализующего
-        // объекта.
         public abstract IEnumerator GetEnumerator();
     }
 
-    // EN: Concrete Iterators implement various traversal algorithms. These
+    // Concrete Iterators implement various traversal algorithms. These
     // classes store the current traversal position at all times.
-    //
-    // RU: Конкретные Итераторы реализуют различные алгоритмы обхода. Эти классы
-    // постоянно хранят текущее положение обхода.
     class AlphabeticalOrderIterator : Iterator
     {
         private WordsCollection _collection;
 		
-        // EN: Stores the current traversal position. An iterator may have a lot
+        // Stores the current traversal position. An iterator may have a lot
         // of other fields for storing iteration state, especially when it is
         // supposed to work with a particular kind of collection.
-        //
-        // RU: Хранит текущее положение обхода. У итератора может быть множество
-        // других полей для хранения состояния итерации, особенно когда он
-        // должен работать с определённым типом коллекции.
         private int _position = -1;
 		
         private bool _reverse = false;
@@ -111,11 +88,8 @@ namespace RefactoringGuru.DesignPatterns.Iterator.Conceptual
         }
     }
 
-    // EN: Concrete Collections provide one or several methods for retrieving
+    // Concrete Collections provide one or several methods for retrieving
     // fresh iterator instances, compatible with the collection class.
-    //
-    // RU: Конкретные Коллекции предоставляют один или несколько методов для
-    // получения новых экземпляров итератора, совместимых с классом коллекции.
     class WordsCollection : IteratorAggregate
     {
         List<string> _collection = new List<string>();
@@ -147,13 +121,9 @@ namespace RefactoringGuru.DesignPatterns.Iterator.Conceptual
     {
         static void Main(string[] args)
         {
-            // EN: The client code may or may not know about the Concrete
+            // The client code may or may not know about the Concrete
             // Iterator or Collection classes, depending on the level of
             // indirection you want to keep in your program.
-            //
-            // RU: Клиентский код может знать или не знать о Конкретном
-            // Итераторе или классах Коллекций, в зависимости от уровня
-            // косвенности, который вы хотите сохранить в своей программе.
             var collection = new WordsCollection();
             collection.AddItem("First");
             collection.AddItem("Second");
