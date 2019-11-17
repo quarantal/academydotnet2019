@@ -2,4 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Academy2019/.vs/Academy2019/v15
+.vs
+obj
+debug
+packages
