@@ -37,6 +37,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistic System", "Logistic System\Logistic System.csproj", "{5EF4BE76-81BF-4DCA-8860-355FE533962E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AviationTransport", "AviationTransport\AviationTransport.csproj", "{CEB8C57C-B7C4-426C-A857-0FFA775EEF20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticFramework", "LogisticFramework\LogisticFramework.csproj", "{061DE5EF-316D-4C33-8EAB-DEB063F55B0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{5EF4BE76-81BF-4DCA-8860-355FE533962E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EF4BE76-81BF-4DCA-8860-355FE533962E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EF4BE76-81BF-4DCA-8860-355FE533962E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB8C57C-B7C4-426C-A857-0FFA775EEF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB8C57C-B7C4-426C-A857-0FFA775EEF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB8C57C-B7C4-426C-A857-0FFA775EEF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB8C57C-B7C4-426C-A857-0FFA775EEF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061DE5EF-316D-4C33-8EAB-DEB063F55B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061DE5EF-316D-4C33-8EAB-DEB063F55B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061DE5EF-316D-4C33-8EAB-DEB063F55B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061DE5EF-316D-4C33-8EAB-DEB063F55B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

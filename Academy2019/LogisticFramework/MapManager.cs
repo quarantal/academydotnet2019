@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logistic_System
+namespace Logistic_System.Framework
 {
     public class MapManager
     {

@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5EF4BE76-81BF-4DCA-8860-355FE533962E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Logistic_System</RootNamespace>
-    <AssemblyName>Logistic System</AssemblyName>
+    <ProjectGuid>{061DE5EF-316D-4C33-8EAB-DEB063F55B0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogisticFramework</RootNamespace>
+    <AssemblyName>LogisticFramework</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AbstractTransport.cs" />
+    <Compile Include="Hop.cs" />
+    <Compile Include="ITransport.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="MapManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AviationTransport\AviationTransport.csproj">
-      <Project>{ceb8c57c-b7c4-426c-a857-0ffa775eef20}</Project>
-      <Name>AviationTransport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogisticFramework\LogisticFramework.csproj">
-      <Project>{061de5ef-316d-4c33-8eab-deb063f55b0a}</Project>
-      <Name>LogisticFramework</Name>
-    </ProjectReference>
+    <Compile Include="TransportCreator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logistic_System
+namespace Logistic_System.Framework
 {
     internal abstract class AbstractTransport : ITransport
     {
@@ -20,5 +20,6 @@ namespace Logistic_System
         {
             return $"This hop costed {GetCost()} € and lasted {GetDuration()} minutes";
         }
+        
     }
 }

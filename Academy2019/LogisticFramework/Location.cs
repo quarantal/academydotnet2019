@@ -1,4 +1,4 @@
-﻿namespace Logistic_System
+﻿namespace Logistic_System.Framework
 {
     public class Location
     {
